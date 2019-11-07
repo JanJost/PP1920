@@ -60,7 +60,7 @@ open class IgnoreDublicates (var decoratedSensor: Sensor): Sensor{
     private var lastValue=0.0F
     override fun getTemperature(): Float{
         while(true){
-            val temp= round(decoratedSensor.getTemperature()*100)
+            val temp= round(decoratedSensor.getTemperature()*100)/100
             if(lastValue != temp){
                 lastValue=temp
                 return temp
