@@ -30,6 +30,8 @@ class UpDownSensor : Sensor {  //von Joel Mai inf166
     }
 }
 
+/*Decorierer*/
+
 open class SensorLogger (var decoratedSensor: Sensor): Sensor{
     override fun getTemperature(): Float{
         val temp=decoratedSensor.getTemperature()

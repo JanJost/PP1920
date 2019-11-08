@@ -1,6 +1,7 @@
 interface HeatingStrategy{
     fun needsHeating ( last10measurements : List<Float>) : Boolean
 }
+/*Strategies*/
 
 class InstantHeatingStrategy : HeatingStrategy {
 

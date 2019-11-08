@@ -2,6 +2,8 @@ interface TemperatureObserver{
     fun update(value :Float)
 }
 
+/*Observer*/
+
 class TemperatureAlert : TemperatureObserver{
     private val alertTemperature=40
     override fun update(value: Float) {
@@ -33,7 +35,7 @@ class HeatingSystem : TemperatureObserver{
     override fun update(value: Float) {
         weatherData.add(value)
         counter++
-        if(counter==10){
+        if(weatherData.size==10){
             if(HeatingStrategy.needsHeating(weatherData)){
                 println("Heizung an")
             }
