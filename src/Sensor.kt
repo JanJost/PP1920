@@ -43,11 +43,6 @@ open class RoundValues (var decoratedSensor: Sensor): Sensor{
         return round(decoratedSensor.getTemperature())
     }
 
-<<<<<<< HEAD
-open class SensorLimit (val decoratedSensor: Sensor){
-    override fun getTemperatur(): Float{
-
-=======
 }
 open class SensorLimits (var decoratedSensor: Sensor): Sensor{
     private val min= 10
@@ -71,6 +66,5 @@ open class IgnoreDublicates (var decoratedSensor: Sensor): Sensor{
                 return temp
             }
         }
->>>>>>> b70f6996be71bf07b14862fca40f7c4b761e38d8
     }
 }
