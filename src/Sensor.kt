@@ -16,6 +16,6 @@ class UpDownSensor : Sensor{
 
 open class SensorLimit (val decoratedSensor: Sensor){
     override fun getTemperatur(): Float{
-        
+
     }
 }
